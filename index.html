@@ -45,6 +45,17 @@
                 </label>
                 <input type="file" id="file-upload" accept="image/*,video/*" multiple>
             </div>
+            <div class="upload-form" id="upload-form">
+                <h3 class="upload-form-title">添加照片信息 ✏️</h3>
+                <img id="upload-preview" class="upload-preview" src="" alt="预览">
+                <input type="text" id="photo-title" placeholder="照片标题" class="message-input">
+                <textarea id="photo-desc" placeholder="描述一下这张照片吧~" class="message-textarea"></textarea>
+                <input type="datetime-local" id="photo-time" class="message-input">
+                <div class="upload-buttons">
+                    <button id="cancel-btn" class="cancel-btn">取消</button>
+                    <button id="confirm-btn" class="send-btn">确认添加 ✨</button>
+                </div>
+            </div>
             <div class="gallery-grid" id="gallery-grid">
                 <p class="gallery-empty">还没有照片哦，快上传一些吧~ 📸</p>
             </div>
@@ -64,6 +75,19 @@
             <p>✨ 感谢访问我的小窝 ✨</p>
             <p>© 2024 肖同学</p>
         </footer>
+    </div>
+
+    <!-- 放大查看模态框 -->
+    <div class="modal" id="photo-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div id="modal-media"></div>
+            <div class="modal-info">
+                <h3 id="modal-title"></h3>
+                <p id="modal-desc"></p>
+                <p class="modal-time" id="modal-time"></p>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
