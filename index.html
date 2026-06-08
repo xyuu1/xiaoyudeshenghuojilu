@@ -11,7 +11,9 @@
     <div class="container">
         <header class="header">
             <div class="avatar-wrapper">
-                <img src="https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20asian%20girl%20avatar%20cartoon%20style%20pink%20background&image_size=square" alt="肖同学" class="avatar">
+                <img src="https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20asian%20girl%20avatar%20cartoon%20style%20pink%20background&image_size=square" alt="肖同学" class="avatar" id="avatar-img">
+                <label for="avatar-upload" class="avatar-upload-btn">📷</label>
+                <input type="file" id="avatar-upload" accept="image/*">
                 <div class="sparkles">✨</div>
             </div>
             <h1 class="name">肖同学</h1>
@@ -70,24 +72,7 @@
                 <textarea id="message-content" placeholder="留下你的留言吧~" class="message-textarea"></textarea>
                 <button id="send-btn" class="send-btn">发送 💌</button>
             </div>
-            <div class="message-list" id="message-list">
-                <div class="message-item">
-                    <div class="message-avatar">😊</div>
-                    <div class="message-content">
-                        <div class="message-name">小美</div>
-                        <div class="message-text">肖同学好可爱！期待更多美食分享~</div>
-                        <div class="message-time">2024-01-15 14:30</div>
-                    </div>
-                </div>
-                <div class="message-item">
-                    <div class="message-avatar">🤗</div>
-                    <div class="message-content">
-                        <div class="message-name">阿杰</div>
-                        <div class="message-text">摄影技术太棒了！想请教一下~</div>
-                        <div class="message-time">2024-01-14 10:20</div>
-                    </div>
-                </div>
-            </div>
+            <div class="message-list" id="message-list"></div>
         </section>
 
         <footer class="footer">

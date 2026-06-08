@@ -14,6 +14,37 @@ function getCurrentTime() {
     return `${year}-${month}-${day} ${hours}:${minutes}`;
 }
 
+// 加载保存的头像
+function loadAvatar() {
+    const savedAvatar = localStorage.getItem('userAvatar');
+    if (savedAvatar) {
+        document.getElementById('avatar-img').src = savedAvatar;
+    }
+}
+
+// 页面加载时调用
+loadAvatar();
+
+// 头像上传功能
+document.getElementById('avatar-upload').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const avatarImg = document.getElementById('avatar-img');
+            avatarImg.src = event.target.result;
+            // 保存到localStorage
+            localStorage.setItem('userAvatar', event.target.result);
+            // 添加动画效果
+            avatarImg.style.animation = 'pulse 0.5s ease';
+            setTimeout(() => {
+                avatarImg.style.animation = '';
+            }, 500);
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
 document.getElementById('send-btn').addEventListener('click', function() {
     const nameInput = document.getElementById('message-name');
     const contentInput = document.getElementById('message-content');
@@ -97,6 +128,15 @@ style.textContent = `
         to {
             opacity: 1;
             transform: translateY(0);
+        }
+    }
+    
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
         }
     }
     
