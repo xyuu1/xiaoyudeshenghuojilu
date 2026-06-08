@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>肖同学的小窝</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="avatar-wrapper">
+                <img src="https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20asian%20girl%20avatar%20cartoon%20style%20pink%20background&image_size=square" alt="肖同学" class="avatar">
+                <div class="sparkles">✨</div>
+            </div>
+            <h1 class="name">肖同学</h1>
+            <p class="age">20岁 | 广东科学技术职业学院</p>
+            <div class="tags">
+                <span class="tag">🍔 美食爱好者</span>
+                <span class="tag">📷 摄影达人</span>
+                <span class="tag">🚶 citywalk</span>
+                <span class="tag">🎵 音乐发烧友</span>
+            </div>
+        </header>
+
+        <section class="about">
+            <h2 class="section-title">关于我 💫</h2>
+            <div class="about-content">
+                <p>大家好呀~ 我是肖同学，一个热爱生活的大学生！</p>
+                <p>喜欢穿梭在城市的大街小巷，用相机记录生活中的小美好，</p>
+                <p>也喜欢探寻各种美食，用味蕾感受世界的奇妙！</p>
+                <p>希望在这里和大家分享我的故事~ 💕</p>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h2 class="section-title">我的相册 📸</h2>
+            <div class="upload-area">
+                <label for="file-upload" class="upload-btn">
+                    <span class="upload-icon">📤</span>
+                    <span>上传照片/视频</span>
+                </label>
+                <input type="file" id="file-upload" accept="image/*,video/*" multiple>
+            </div>
+            <div class="gallery-grid" id="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20food%20photography%20aesthetic%20pink%20theme&image_size=landscape_4_3" alt="美食">
+                    <div class="gallery-overlay">🍔 美食打卡</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://neeko-copilot.bytedance.net/api/text2image?prompt=beautiful%20city%20street%20photography%20sunset&image_size=landscape_4_3" alt="街拍">
+                    <div class="gallery-overlay">🚶 citywalk</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://neeko-copilot.bytedance.net/api/text2image?prompt=cute%20cat%20photography%20soft%20light&image_size=landscape_4_3" alt="萌宠">
+                    <div class="gallery-overlay">🐱 小猫咪</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://neeko-copilot.bytedance.net/api/text2image?prompt=aesthetic%20music%20headphones%20pink%20background&image_size=landscape_4_3" alt="音乐">
+                    <div class="gallery-overlay">🎵 音乐时光</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="messages">
+            <h2 class="section-title">留言板 💬</h2>
+            <div class="message-form">
+                <input type="text" id="message-name" placeholder="你的名字~" class="message-input">
+                <textarea id="message-content" placeholder="留下你的留言吧~" class="message-textarea"></textarea>
+                <button id="send-btn" class="send-btn">发送 💌</button>
+            </div>
+            <div class="message-list" id="message-list">
+                <div class="message-item">
+                    <div class="message-avatar">😊</div>
+                    <div class="message-content">
+                        <div class="message-name">小美</div>
+                        <div class="message-text">肖同学好可爱！期待更多美食分享~</div>
+                        <div class="message-time">2024-01-15 14:30</div>
+                    </div>
+                </div>
+                <div class="message-item">
+                    <div class="message-avatar">🤗</div>
+                    <div class="message-content">
+                        <div class="message-name">阿杰</div>
+                        <div class="message-text">摄影技术太棒了！想请教一下~</div>
+                        <div class="message-time">2024-01-14 10:20</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>✨ 感谢访问我的小窝 ✨</p>
+            <p>© 2024 肖同学</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
