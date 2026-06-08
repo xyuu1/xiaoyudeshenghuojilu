@@ -193,6 +193,16 @@ body {
     gap: 15px;
 }
 
+.gallery-empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: #ff69b4;
+    font-size: 18px;
+    background: rgba(255, 240, 245, 0.3);
+    border-radius: 20px;
+    border: 2px dashed #ffb6c1;
+}
+
 .gallery-item {
     position: relative;
     border-radius: 20px;

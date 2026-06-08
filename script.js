@@ -82,6 +82,12 @@ document.getElementById('file-upload').addEventListener('change', function(e) {
     const files = e.target.files;
     const galleryGrid = document.getElementById('gallery-grid');
     
+    // 隐藏提示文字
+    const emptyText = galleryGrid.querySelector('.gallery-empty');
+    if (emptyText) {
+        emptyText.style.display = 'none';
+    }
+    
     for (let i = 0; i < files.length; i++) {
         const file = files[i];
         const reader = new FileReader();
